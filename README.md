@@ -2,6 +2,16 @@
 
 A Firestore Hello World using the Flutter Counter Starter App, with setup for the Local Firebase Firestore Emulator. 
 
+## Demo 
+
+### Local Firestore Emulator 
+
+![Local Firestore Emulator](demo/demo1.gif)
+
+### Production Firestore 
+
+![Production Firestore](demo/demo2.gif)
+
 ## Getting Started
 
 See the Medium article [here](https://medium.com/@gangyistudios/firestore-counter-app-firestore-and-flutter-in-2022-with-firebase-local-emulator-suite-recipe-9d6e510a53f3)!
@@ -40,12 +50,4 @@ flutter run
 
 8. Visit the [full article](https://medium.com/@gangyistudios/firestore-counter-app-firestore-and-flutter-in-2022-with-firebase-local-emulator-suite-recipe-9d6e510a53f3) on Medium for an in-depth recipe!
 
-## Demo 
 
-### Local Firestore Emulator 
-
-![Local Firestore Emulator](demo/demo1.gif)
-
-### Production Firestore 
-
-![Production Firestore](demo/demo2.gif)
