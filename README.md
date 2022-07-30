@@ -16,19 +16,19 @@ Before running this Flutter project, you will need to:
 flutterfire configure
 ```
 
-3. Initialize emulators - select Firebase Feature: Emulators only -> Firestore emulator only, then defaults for the rest.
+3. Initialize emulators - select Firebase Feature: Emulators only -> Firestore emulator only, then defaults for the rest. Note, we are not selecting Firestore here as `flutterfire` has already handled that for us.
 
 ```
 firebase init
 ```
 
-4. Run the emulator suite, check all is working well by checking the Emulator UI at http://localhost:4000     
+4. Run the emulator suite, check all is working well by checking the [Emulator UI Dashboard](http://localhost:4000)
 
 ```
 firebase emulators:start
 ```
 
-5. Open the Firestore Emulator UI http://localhost:4000/firestore 
+5. Bring up the [Firestore Emulator UI](http://localhost:4000/firestore) to view live changes
 
 6. Run app in debug mode
 
