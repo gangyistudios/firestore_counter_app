@@ -19,7 +19,6 @@ class _MyHomePageState extends State<MyHomePage> {
         .collection('counter')
         .doc('counter')
         .set({'count': _counter});
-    setState(() {});
   }
 
   @override
@@ -35,8 +34,9 @@ class _MyHomePageState extends State<MyHomePage> {
             const Text(
               'You have pushed the button this many times:',
             ),
-            FutureBuilder<DocumentSnapshot>(
-              future: firestore.collection('counter').doc('counter').get(),
+            StreamBuilder<DocumentSnapshot>(
+              stream:
+                  firestore.collection('counter').doc('counter').snapshots(),
               builder: (context, snapshot) {
                 if (snapshot.hasData) {
                   _counter = snapshot.data!.get('count');
