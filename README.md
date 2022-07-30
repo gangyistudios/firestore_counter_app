@@ -1,6 +1,6 @@
 # Firestore Counter App
 
-A Firestore Hello World using the Flutter Counter Starter App, including Local Firestore Emulator config. 
+A Firestore Hello World using the Flutter Counter Starter App, with setup for the Local Firebase Firestore Emulator. 
 
 ## Getting Started
 
