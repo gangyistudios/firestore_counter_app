@@ -1,16 +1,15 @@
-# firestore_counter_app
+# Firestore Counter App
 
-A new Flutter project.
+A Firestore Hello World using the Flutter Counter Starter App, including Local Firestore Emulator config. 
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+See the Medium article [here]()!
 
-A few resources to get you started if this is your first Flutter project:
+## Demo 
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Local Firestore Emulator 
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Local Firestore Emulator ](demo/demo1.gif)
+
+Production Firestore 
