@@ -10,6 +10,8 @@ See the Medium article [here]()!
 
 Local Firestore Emulator 
 
-![Local Firestore Emulator ](demo/demo1.gif)
+![Local Firestore Emulator](demo/demo1.gif)
 
 Production Firestore 
+
+![Production Firestore](demo/demo2.gif)
