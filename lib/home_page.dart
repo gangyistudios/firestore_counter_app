@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -9,12 +10,16 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+  FirebaseFirestore firestore = FirebaseFirestore.instance;
+  late int _counter;
 
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
+  Future<void> _incrementCounter() async {
+    _counter++;
+    await firestore
+        .collection('counter')
+        .doc('counter')
+        .set({'count': _counter});
+    setState(() {});
   }
 
   @override
@@ -30,9 +35,19 @@ class _MyHomePageState extends State<MyHomePage> {
             const Text(
               'You have pushed the button this many times:',
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
+            FutureBuilder<DocumentSnapshot>(
+              future: firestore.collection('counter').doc('counter').get(),
+              builder: (context, snapshot) {
+                if (snapshot.hasData) {
+                  _counter = snapshot.data!.get('count');
+                  return Text(
+                    _counter.toString(),
+                    style: Theme.of(context).textTheme.headline4,
+                  );
+                } else {
+                  return const CircularProgressIndicator();
+                }
+              },
             ),
           ],
         ),
