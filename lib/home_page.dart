@@ -39,7 +39,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   firestore.collection('counter').doc('counter').snapshots(),
               builder: (context, snapshot) {
                 if (snapshot.hasData) {
-                  _counter = snapshot.data!.get('count');
+                  /// Sets the count to 0 if the collection/document/count field
+                  /// does not yet exist
+                  _counter = snapshot.data!.data() != null
+                      ? snapshot.data!.get('count')
+                      : 0;
                   return Text(
                     _counter.toString(),
                     style: Theme.of(context).textTheme.headline4,
